@@ -1,0 +1,41 @@
+version: '3.9'
+services:
+  apache:
+    image: webdevops/php-apache:alpine-php7
+    container_name: my-apache-app
+    ports:
+    - '80:80'
+    volumes:
+    - ./website:/usr/local/apache2/htdocs
+    networks:
+      - meu-site
+  
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "admin"
+      MYSQL_DATABASE: "contatos"
+    ports:
+      - "3306:3306"
+    volumes:
+      - /data:/var/lib/mysql
+    networks:
+      - meu-site
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      MYSQL_ROOT_PASSWORD: "admin"
+    ports:
+      - "8080:80"
+    volumes:
+      - /admin/uploads.ini:/usr/local/etc/php/conf.d/php-phpmyadmin.ini
+
+    networks:
+      - meu-site
+
+networks:
+  meu-site:
+    driver:bridge
+
+
