@@ -1,0 +1,164 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	background: #fff;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20px;
+}
+h2{
+	line-height: 55px;
+}
+h3{
+	font-size: 32px;
+	line-height: 50px;
+}
+
+p{
+	font-family: 'Josefin Slab', serif;
+	font-size: 18px;
+	line-height: 20px;
+}
+strong{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 18px;
+	display: block;
+	line-height: 25px;
+
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration:none;
+}
+header{
+	height: 90px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	background: #f3d867;
+	border-bottom: 1px dotted #EE5F5B;
+	margin:auto; 
+	padding: 10px;
+}
+
+header .logo h1{
+	color:#f3d867;
+	font-size:1px;
+}
+header .logo img{
+	width: 65px;
+}
+header .text{
+	margin-left: 10px;	
+	text-align:center;
+}
+.menu-cardapio{
+	width: 100%;
+	height: 50px;
+	background-color:#f3d867;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	position: sticky;
+	top: 0;
+	padding: 0 10px 0 10px;
+	margin-bottom: 10px;
+}
+.menu-cardapio ul {
+	display: flex;
+	margin: auto;
+	width: 90%;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	overflow:auto;
+
+
+}
+.menu-cardapio ul li{
+	list-style: none;
+	margin: 10px;
+}
+.menu-cardapio ul li a{
+	color: #333;
+	text-decoration: none;
+}
+.menu-cardapio img{
+	max-width: 60px;
+	margin: 5px;
+}
+
+main{
+	max-width: 920px;
+	padding: 15px;
+	margin: auto;
+	background-color:#fff;
+}
+section{
+	width: 100%;
+}
+section article{
+	border-bottom: 1px dotted grey;
+	padding-bottom: 10px;
+}
+.pizzas{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+
+.sanduiches{
+	max-width: 550px;
+	margin: 30px auto 25px auto;
+}
+.sanduiches  ul li {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px  20px;
+}
+.sanduiches ul li strong,.sanduiches ul li span{
+	font-family: 'Josefin Slab', serif;
+	font-size: 14px;
+}
+
+
+
+footer{
+	text-align: center;
+	height: 120px;
+}
+footer strong {
+	font-family: 'Josefin Slab', serif;
+
+	line-height: 50px;
+	color: red;
+}
+@media only screen and (max-width: 600px) {
+	h1,h2,h3,h4,h5,h6{
+		font-size: 16px;
+	}
+	h3{
+		font-size: 22px;
+		line-height: 50px;
+	}
+	.pizzas{
+		flex-direction: column;
+	}
+	.pizzas div{
+		padding: 10px;
+	}
+	
+}
